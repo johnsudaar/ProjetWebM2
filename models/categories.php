@@ -1,15 +1,28 @@
 <?php
-class Categorie {
-  private $id;
-  private $name;
-  private $_indb;
-  private static $TABLE_NAME = "Categorie";
+class Categorie extends Model{
+  public $id;
+  public $name;
+  public $parent;
+  public $parent_id;
+  public $childs;
+  public $_indb;
 
-  public function __construct($row) {
-    $id = $row["id"];
-    $name = $row["name"];
+  const TABLE_NAME = "Categorie";
+  const TABLE_COLUMNS = ["id", "name", "parent_id"];
+
+  static function Create($name, $parent = null){
+    $c = new Categorie();
+    $c->name = $name;
+    $c->id = -1;
+    $c->childs = null;
+    $c->parent = $parent;
+    if($parent != null) {
+      $c->parent_id = $parent->getId();
+    } else {
+      $c->parent_id = null;
+    }
+    return $c;
   }
-
 
   function getId(){
     return $this->id;
@@ -19,27 +32,30 @@ class Categorie {
     return $this->name;
   }
 
-  function setName(){
-    return $this->name;
+  function getParent(){
+    if($this->parent == null) {
+      if($this->parent_id != null) {
+        $this->parent = Categorie::getById($this->parent_id);
+      }
+    }
+    return $this->parent;
   }
 
-  function save(){
-    if($this->_indb) {
-      $request = "UPDATE "+$TABLE_NAME+" SET name=? WHERE id=?;";
-    } else {
-      $request = "INSERT INTO "+$TABLE_NAME+"(id, name) VALUES (?,?);";
-    }
-  }
+  function getChilds(){
+    if($this->childs == null) {
+      $childs = array();
 
-  public static function getAll(){
-    $driver = DBDriver::get()->getDriver();
-    $query  = $driver->prepare("SELECT * FROM "+$TABLE_NAME);
-    $query->execute();
-    $data = array();
-    while ($row = $query->fetch()) {
-      $data[] = new User($row["id"],$row["nom"],$row["prenom"],$row["fonction"],$row["pays"],$row["etablissement"],$row["ville"], $row["adresse"], $row["photo"], User::getTagsForUser($row["id"]),$row['connect']);
+      $driver = DBDriver::get()->getDriver();
+      $query  = $driver->prepare("SELECT * FROM ".static::TABLE_NAME." WHERE parent_id=".$this->getId());
+      $query->execute();
+      $data = array();
+      while ($row = $query->fetch()) {
+        $data[] = new Categorie($row);
+      }
+      $this->childs = $childs;
     }
-    return $data;
+
+    return $this->childs;
   }
 }
 ?>
