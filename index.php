@@ -1,6 +1,8 @@
 <?php
 session_start();
-include "bootstrap.php";
+
+require_once "core/bootstrap.php";
+
 $path = explode("/",$_SERVER["PATH_INFO"]);
 if(count($path) <= 1){
 	redirect("index.php/main/index");
