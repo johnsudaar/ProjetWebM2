@@ -15,40 +15,60 @@
     <link rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/public/style/main.css"/>
 
-    <script type="javascript" src="/vendor/components/jquery/jquery.min.js"> </script>
+    <script src="/vendor/components/jquery/jquery.min.js"> </script>
+
 
   </head>
   <body>
-    <header class="container">
-      <div class="d-flex justify-content-end">
-        <div class="mr-auto p-2">
-          Shop by phone <span class="bold">(01) 123 456 789 SM</span> <span class="bold blue">Live Chat With Us</span>
-        </div>
-        <a href="#" class="p-2 blue">My Account </a>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+    <div class="container">
+      <header>
+        <div class="nav-top margin-small">
+          <p> Shop by phone <span class="bold"> (01) 123 456 SM </span> <span class="bold  blue">Live Chat With Us</span> </p>
+          <div class="pull-right">
+            <span class="dropdown">
+              <span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="bold blue">My Account</span>
+                <span class="caret"></span>
+              </span>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </span>
+            <span class="divider-vertical"></span>
+            <span class="dropdown">
+              <span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="blue"> <span class="bold">My Cart</span> (2) </span>
+                <span class="caret"></span>
+              </span>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+              </ul>
+            </span>
           </div>
         </div>
-        <a href="#" class="p-2 blue"> My Cart (2)</a>
-      </div>
-      <div>
-        <img src="/public/images/logo.png" alt="softmarket"/>
-        <span>
-          <a href="#">Office</a>
-          <a href="#">Multimedia</a>
-          <a href="#">Design</a>
-          <a href="#">Developer</a>
-          <a href="#">Utilities</a>
-          <a href="#">Games</a>
-        </span>
-        <span>
-          <input type="text"*/>
-        </span>
-      </div>
-    </header>
+
+        <nav class="margin-small">
+          <div class="row vertical-align">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-md-2 col-sm-offset-0">
+              <img class="full-width" src="/public/images/logo.png"/>
+            </div>
+            <div class="col-xs-9 col-sm-6 col-md-7">
+              <ul class="menu pull-right">
+                <li><a> Office </a></li>
+                <li><a> Multimedia </a></li>
+                <li><a> Design </a></li>
+                <li><a> Utilities </a></li>
+                <li><a> Games </a></li>
+              </ul>
+            </div>
+            <div class="col-xs-3">
+              <input class="form-control square-border" type="test"/>
+              <span class="glyphicon-form glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+            </div>
+          </div>
+        </nav>
+        <div class="separator margin-medium"></div>
+      </header>
+      <div class="content">

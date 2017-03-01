@@ -2,6 +2,13 @@ body {
   font-family: "arial";
 }
 
+p {
+  display: inline-block;
+}
+
+footer {
+  margin: 20px 0;
+}
 
 .bold {
   font-weight: bold;
@@ -9,4 +16,82 @@ body {
 
 .blue {
   color: #3B96DA;
+}
+
+
+.margin-small {
+  margin-top: 10px;
+}
+
+.margin-medium {
+  margin-top: 40px;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.separator {
+  background-color: #BBB;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 1px;
+}
+
+.square-border {
+  border-radius: 0px;
+}
+
+.glyphicon-form {
+  padding-right: 40px;
+}
+
+.nav-top {
+  font-size: 12px;
+}
+
+.menu {
+  width: 100%;
+  text-align: right;
+  height: 100%;
+  margin-bottom: 0px;
+}
+
+.menu li {
+  vertical-align: middle;
+  height: 100%;
+  display: inline;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-transform: uppercase;
+}
+
+.menu a {
+  color: #555;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.divider-vertical::before {
+  height: 15px;
+  margin: 0 9px;
+  display: inline-block;
+  content: "|";
+  color: #CCC;
+}
+
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
