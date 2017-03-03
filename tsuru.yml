@@ -1,7 +1,7 @@
 php:
   version: 5.6
   frontend:
-    name: nginx
+    name: apache
   interpretor:
     name: fpm
     options:
