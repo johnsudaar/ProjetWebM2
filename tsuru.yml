@@ -1,6 +1,6 @@
 php:
   interpretor:
-    name: fpm
+    name: fpm71
     options:
       extensions:
         - php-mysql
