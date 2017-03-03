@@ -1,7 +1,7 @@
 <?php
 function getfromenv($index,$default){
-  if(isset($_ENV[$index])) {
-    return $_ENV[$index];
+  if(isset(getenv($index))) {
+    return getenv($index);
   } else {
     return $default;
   }
