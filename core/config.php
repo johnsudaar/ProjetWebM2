@@ -1,6 +1,6 @@
 <?php
 function getfromenv($index,$default){
-  if(getenv($index) !== null) {
+  if(getenv($index) != null) {
     return getenv($index);
   } else {
     return $default;
