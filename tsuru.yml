@@ -1,7 +1,10 @@
 php:
-  version: 7.0
+  version: 5.6
+  frontend:
+    name: nginx
   interpretor:
     name: fpm
     options:
       extensions:
         - php-mysql
+  composer: true
