@@ -1,6 +1,7 @@
 php:
+  version: 7.0
   interpretor:
-    name: fpm71
+    name: fpm
     options:
       extensions:
         - php-mysql
