@@ -56,11 +56,11 @@
             </div>
             <div class="col-xs-9 col-sm-6 col-md-7">
               <ul class="menu pull-right">
-                <li><a href="#"> Office </a></li>
-                <li><a href="#"> Multimedia </a></li>
-                <li><a href="#"> Design </a></li>
-                <li><a href="#"> Utilities </a></li>
-                <li><a href="#"> Games </a></li>
+                <li><a href="#" data-send="shopClass"> Office </a></li>
+                <li><a href="#" data-send="shopClass"> Multimedia </a></li>
+                <li><a href="#" data-send="shopClass"> Design </a></li>
+                <li><a href="#" data-send="shopClass"> Utilities </a></li>
+                <li><a href="#" data-send="shopClass"> Games </a></li>
               </ul>
             </div>
             <div class="col-xs-3">

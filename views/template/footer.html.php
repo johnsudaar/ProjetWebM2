@@ -46,6 +46,9 @@
       </div>
     </div>
   </body>
+
   <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.js"> </script>
+  <script src="/public/script/observer.js"> </script>
+  <script src="/public/script/domobserver.js"> </script>
 
 </html>

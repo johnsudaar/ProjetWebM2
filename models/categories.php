@@ -52,7 +52,7 @@ class Categorie extends Model{
       while ($row = $query->fetch()) {
         $data[] = new Categorie($row);
       }
-      $this->childs = $childs;
+      $this->childs = $data;
     }
 
     return $this->childs;

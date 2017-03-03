@@ -22,7 +22,7 @@ class Model {
     $query->execute();
     $data = array();
     while ($row = $query->fetch()) {
-      $data[] = new $$TABLE_NAME($row);
+      $data[] = new $TABLE_NAME($row);
     }
     return $data;
   }

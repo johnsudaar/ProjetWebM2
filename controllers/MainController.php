@@ -1,8 +1,9 @@
 <?php
 class MainController {
   function index(){
-
-    render("index");
+    $data = array();
+    $data["categories"] = Categorie::getAll();
+    render("index", $data);
   }
 }
 ?>
