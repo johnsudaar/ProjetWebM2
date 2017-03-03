@@ -56,12 +56,13 @@ footer {
   text-align: right;
   height: 100%;
   margin-bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menu li {
-  vertical-align: middle;
-  height: 100%;
-  display: inline;
+  display: flex;
+  align-items: center;
   margin-left: 2%;
   margin-right: 2%;
   text-transform: uppercase;
@@ -73,6 +74,24 @@ footer {
 
 .full-width {
   width: 100%;
+}
+
+.footer{
+  background-color: #F1F5F9;
+  padding: 40px 0;
+}
+
+.payments-methods {
+  justify-content: flex-end;
+}
+.payments-methods-container img {
+  margin-left: 10px;
+  height: 15px;
+}
+
+.social-container {
+  margin-right: 40px;
+  display: inline-block;
 }
 
 .divider-vertical::before {
@@ -93,5 +112,4 @@ footer {
 .vertical-align > [class*=" col-"] {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
