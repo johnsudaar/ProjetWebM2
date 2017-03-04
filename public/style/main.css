@@ -161,3 +161,81 @@ footer {
 .filters .panel-body > ul {
   padding: 0;
 }
+
+.colors{
+  height: 50px;
+}
+
+.colors > div {
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  float:left;
+  position: relative;
+  z-index: 1;
+}
+
+.colors > div:hover{
+  box-shadow: 0px 0px 4px black;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 1px;
+  z-index: 2;
+}
+
+.colors > div.selected {
+  box-shadow: 0px 0px 4px black;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 1px;
+  z-index: 2;
+}
+
+.red {
+  background-color: #EA0000;
+}
+.orange {
+  background-color: #FFA300;
+}
+.yellow {
+  background-color: #EAFF00;
+}
+.green {
+  background-color: #44C700;
+}
+.aqua {
+  background-color: #00EF49;
+}
+.cyan {
+  background-color: #00FDFF;
+}
+.light-blue {
+  background-color: #266AFF;
+}
+.blue {
+  background-color: #3900B8;
+}
+.dark-purple {
+  background-color: #7800E0;
+}
+.purple {
+  background-color: #B400DA;
+}
+.black {
+  background-color: #000;
+}
+.white {
+  background-color: #FFF;
+}
+.black-white {
+  background-color: #000;
+  border-bottom: 22px solid transparent;
+
+  border-right:22px solid white;
+}
+.pink {
+  background-color: #EB00FF;
+}
+.dark-pink {
+  background-color: #CB0080;
+}
