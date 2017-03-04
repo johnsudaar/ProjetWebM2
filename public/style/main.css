@@ -39,6 +39,14 @@ footer {
   height: 1px;
 }
 
+.line{
+  background-color: #DDD;
+  margin-bottom: 15px;
+  width: 100%;
+  left: 0;
+  height: 1px;
+}
+
 .square-border {
   border-radius: 0px;
 }
@@ -112,4 +120,44 @@ footer {
 .vertical-align > [class*=" col-"] {
   display: flex;
   align-items: center;
+}
+
+.row-reset{
+  margin: 0 0px;
+}
+
+/* **************** INDEX **************** */
+
+.shop-class {
+  font-weight: normal;
+}
+
+
+.filters {
+  border-radius: 0px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.filters .panel-heading {
+  background-color: #DFDFDF !important;
+  font-weight: bold;
+}
+
+.filter-title{
+  margin-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.panel-body .filter-title:first-child{
+  margin-top: 0;
+}
+
+.filters li {
+  list-style-type: none;
+}
+
+.filters .panel-body > ul {
+  padding: 0;
 }

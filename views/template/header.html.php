@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/public/style/main.css"/>
+    <link rel="stylesheet" href="/public/style/slider.css"/>
 
     <script src="/vendor/components/jquery/jquery.min.js"> </script>
 

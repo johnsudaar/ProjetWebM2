@@ -26,5 +26,4 @@ window.filters.addListener(function(value){
 });
 
 window._filter.addListener(function(f){
-  console.log(f);
 });
