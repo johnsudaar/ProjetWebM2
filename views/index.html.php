@@ -44,4 +44,36 @@
       </div>
     </div>
   </div>
+
+  <div class="col-sm-9 main-shop">
+    <img class="full-width" src="/public/images/placeholder1.png" />
+    <div class="items-header">
+      <p class="items">
+        150 items
+      </p>
+      <div class="form-inline display-selectors">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active glyphicon glyphicon-th-large">
+            <input type="radio" name="options" id="grid" autocomplete="off" checked>
+          </label>
+          <label class="btn btn-default glyphicon glyphicon-th-list">
+            <input type="radio" name="options" id="list" autocomplete="off">
+          </label>
+        </div>
+        <select class="form-control">
+          <option>15 per page</option>
+          <option>50 per page</option>
+          <option>100 per page</option>
+        </select>
+        <select class="form-control">
+          <option>Position</option>
+          <option>Position</option>
+          <option>Position</option>
+        </select>
+        <button class="btn btn-default glyphicon glyphicon-arrow-up"></button>
+      </div>
+    </div>
+
+    <div class="margin-small separator"></div>
+  </div>
 </div>

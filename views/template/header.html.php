@@ -24,11 +24,11 @@
     <div class="container">
       <header>
         <div class="nav-top margin-small">
-          <p> Shop by phone <span class="bold"> (01) 123 456 SM </span> <span class="bold  blue">Live Chat With Us</span> </p>
+          <p> Shop by phone <span class="bold"> (01) 123 456 SM </span> <span class="bold blue-text">Live Chat With Us</span> </p>
           <div class="pull-right">
             <span class="dropdown">
               <span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span class="bold blue">My Account</span>
+                <span class="bold blue-text">My Account</span>
                 <span class="caret"></span>
               </span>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -39,7 +39,7 @@
             <span class="divider-vertical"></span>
             <span class="dropdown">
               <span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span class="blue"> <span class="bold">My Cart</span> (2) </span>
+                <span class="blue-text"> <span class="bold">My Cart</span> (2) </span>
                 <span class="caret"></span>
               </span>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

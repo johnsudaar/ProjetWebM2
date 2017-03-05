@@ -14,10 +14,13 @@ footer {
   font-weight: bold;
 }
 
-.blue {
+.blue-text {
   color: #3B96DA;
 }
 
+.flex-hor > div{
+  float: left;
+}
 
 .margin-small {
   margin-top: 10px;
@@ -155,11 +158,41 @@ footer {
 }
 
 .filters li {
+  margin: 15px 0px;
   list-style-type: none;
 }
 
 .filters .panel-body > ul {
   padding: 0;
+}
+
+.main-shop{
+  margin-top: 20px;
+}
+
+.btn-group .active {
+  box-shadow: none;
+  color:white !important;
+  background-color: #3890E1 !important;
+}
+
+.btn-group label {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+}
+
+.display-selectors {
+  float:right;
+}
+
+.display-selectors select {
+  border-radius: 20px;
+}
+
+.display-selectors button{
+  border-radius: 20px;
+  padding: 6px 10px;
 }
 
 .colors{
@@ -173,6 +206,14 @@ footer {
   float:left;
   position: relative;
   z-index: 1;
+}
+
+.items {
+  margin-top: 10px;
+}
+
+.items-header{
+  margin-top: 15px;
 }
 
 .colors > div:hover{
