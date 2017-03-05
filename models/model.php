@@ -69,4 +69,3 @@ class Model {
     $this->_indb = true;
   }
 }
-?>

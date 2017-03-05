@@ -5,7 +5,6 @@ class Categorie extends Model{
   public $parent;
   public $parent_id;
   public $childs;
-  public $_indb;
 
   const TABLE_NAME = "Categorie";
   const TABLE_COLUMNS = ["id", "name", "parent_id"];
@@ -58,4 +57,3 @@ class Categorie extends Model{
     return $this->childs;
   }
 }
-?>

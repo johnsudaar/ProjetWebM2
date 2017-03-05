@@ -12,5 +12,3 @@ function generate_menu($categories, $firstlevel){
   $str .= "</ul>";
   return $str;
 }
-
-?>

@@ -19,4 +19,3 @@ function notFound() {
   render("404");
   die();
 }
-?>

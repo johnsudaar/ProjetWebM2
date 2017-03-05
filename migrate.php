@@ -38,20 +38,37 @@ query("CREATE TABLE ".Categorie::TABLE_NAME."(\n".
   "parent_id INT(6) UNSIGNED)");
 
 echo "\033[0m Seeding categories";
-Categorie::create("test1", null)->save();
+Categorie::create("Vivamus mauris")->save();
 ce(".");
-Categorie::create("test2")->save();
+Categorie::create("Rhoncus vitae semper")->save();
 ce(".");
-Categorie::create("test21", Categorie::getById(2))->save();
+Categorie::create("Vivamus mauis", Categorie::getById(2))->save();
 ce(".");
-Categorie::create("test22", Categorie::getById(2))->save();
+Categorie::create("Rhoncus vitae semper", Categorie::getById(2))->save();
 ce(".");
-Categorie::create("test23", Categorie::getById(2))->save();
+Categorie::create("Adipiscing ac eros", Categorie::getById(2))->save();
 ce(".");
-Categorie::create("test3")->save();
+Categorie::create("Fuse ac ante elit")->save();
 ce(".");
-Categorie::create("test4")->save();
+Categorie::create("Vel porta nisi")->save();
 ce(".");
-
+Categorie::create("Aliquam vulputate")->save();
+ce(".");
+Categorie::create("Venenatis sapien")->save();
+ce(".");
 echo "\033[32m Ok\n\033[0m";
-?>
+
+echo "\033[0m Droping Brands";
+query("DROP TABLE IF EXISTS ".Brand::TABLE_NAME);
+
+echo "\033[0m Creating Brands";
+query("CREATE TABLE ".Brand::TABLE_NAME." (\n".
+  "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,\n".
+  "name VARCHAR(60) NOT NULL)");
+
+echo "\033[0m Seeding Brands";
+Brand::create("Karma")->save();
+ce(".");
+Brand::create("Ideos")->save();
+ce(".");
+echo "\033[32m Ok\n\033[0m";

@@ -41,6 +41,12 @@
 
         <p class="filter-title"> Brand </p>
         <div class="line"></div>
+
+        <ul>
+          <?php foreach ($brands as $brand): ?>
+            <li> <?= $brand->getName() ?>
+          <?php endforeach; ?>
+        </ui>
       </div>
     </div>
   </div>

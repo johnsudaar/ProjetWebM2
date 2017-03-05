@@ -11,4 +11,3 @@ $DATABASE_URL = getfromenv("DATABASE_URL", "db");
 $DATABASE_NAME = getfromenv("DATABASE_NAME", "softmarket");
 $DATABASE_USER = getfromenv("DATABASE_USER", "softmarket");
 $DATABASE_PASSWORD = getfromenv("DATABASE_PASSWORD", "softmarket");
-?>

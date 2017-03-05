@@ -20,5 +20,3 @@ class DBDriver{
 		return $this->bdd;
 	}
 }
-
-?>
