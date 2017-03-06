@@ -11,10 +11,11 @@ class Categorie extends Model{
 
   static function Create($name, $parent = null){
     $c = new Categorie();
-    $c->name = $name;
-    $c->id = -1;
+    $c->name   = $name;
+    $c->id     = -1;
     $c->childs = null;
     $c->parent = $parent;
+    
     if($parent != null) {
       $c->parent_id = $parent->getId();
     } else {

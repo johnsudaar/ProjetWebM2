@@ -8,8 +8,10 @@ class Brand extends Model {
 
   static function Create($name){
     $c = new Brand();
+
     $c->name = $name;
-    $c->id = -1;
+    $c->id   = -1;
+    
     return $c;
   }
 

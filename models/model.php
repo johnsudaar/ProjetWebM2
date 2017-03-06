@@ -65,7 +65,15 @@ class Model {
     }
 
     $query = $driver->exec($request);
+    $error = $driver->errorInfo();
+    if ($error[0] != 0) {
+      echo "\n\033[31m PDO::errorInfo():".$error[2]."\n";
+      echo "\033[0m\n";
+      exit(1);
+    }
     $this->id = $driver->lastInsertId();
     $this->_indb = true;
+
+    return $this;
   }
 }
