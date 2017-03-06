@@ -5,13 +5,14 @@ class Brand extends Model {
 
   const TABLE_NAME = "Brand";
   const TABLE_COLUMNS = ["id", "name"];
+  const TABLE_JOIN = [];
 
   static function Create($name){
     $c = new Brand();
 
     $c->name = $name;
     $c->id   = -1;
-    
+
     return $c;
   }
 

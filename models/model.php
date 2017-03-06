@@ -13,34 +13,7 @@ class Model {
     }
   }
 
-
-  public static function getAll(){
-    $TABLE_NAME = static::TABLE_NAME;
-
-    $driver = DBDriver::get()->getDriver();
-    $query  = $driver->prepare("SELECT * FROM ".static::TABLE_NAME);
-    $query->execute();
-    $data = array();
-    while ($row = $query->fetch()) {
-      $data[] = new $TABLE_NAME($row);
-    }
-    return $data;
-  }
-
-  public static function getById($id) {
-    $TABLE_NAME = static::TABLE_NAME;
-
-    $driver = DBDriver::get()->getDriver();
-    $query  = $driver->prepare("SELECT *  FROM ".static::TABLE_NAME." WHERE id=".$id);
-    $query->execute();
-    $data = null;
-    if($row = $query->fetch()) {
-      $data = new $TABLE_NAME($row);
-    }
-    return $data;
-  }
-
-  function save(){
+  public function save(){
     $driver = DBDriver::get()->getDriver();
     if($this->_indb) {
       $request = "UPDATE ".static::TABLE_NAME." SET ";
@@ -75,5 +48,44 @@ class Model {
     $this->_indb = true;
 
     return $this;
+  }
+
+  protected function complete(){
+    foreach(static::TABLE_JOIN as $join) {
+      $this->{$join}();
+    }
+
+    return $this;
+  }
+
+  public static function getAll(){
+    $TABLE_NAME = static::TABLE_NAME;
+
+    $driver = DBDriver::get()->getDriver();
+    $query  = $driver->prepare("SELECT * FROM ".static::TABLE_NAME);
+    $query->execute();
+    $data = array();
+    while ($row = $query->fetch()) {
+      $data[] = (new $TABLE_NAME($row))->complete();
+
+    }
+    return $data;
+  }
+
+  public static function getById($id) {
+    $TABLE_NAME = static::TABLE_NAME;
+
+    $driver = DBDriver::get()->getDriver();
+    $query  = $driver->prepare("SELECT *  FROM ".static::TABLE_NAME." WHERE id=".$id);
+    $query->execute();
+    $data = null;
+    if($row = $query->fetch()) {
+      $data = (new $TABLE_NAME($row))->complete();
+    }
+    return $data;
+  }
+
+  public static function QueryBuilder(){
+    return new QueryBuilder(static::TABLE_NAME, static::TABLE_NAME);
   }
 }

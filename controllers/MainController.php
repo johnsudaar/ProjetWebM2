@@ -7,4 +7,3 @@ class MainController {
     render("index", $data);
   }
 }
-?>

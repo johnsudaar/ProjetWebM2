@@ -3,11 +3,13 @@ class Categorie extends Model{
   public $id;
   public $name;
   public $parent;
-  public $parent_id;
   public $childs;
+
+  protected $parent_id;
 
   const TABLE_NAME = "Categorie";
   const TABLE_COLUMNS = ["id", "name", "parent_id"];
+  const TABLE_JOIN = ["getParent"];
 
   static function Create($name, $parent = null){
     $c = new Categorie();
@@ -15,7 +17,7 @@ class Categorie extends Model{
     $c->id     = -1;
     $c->childs = null;
     $c->parent = $parent;
-    
+
     if($parent != null) {
       $c->parent_id = $parent->getId();
     } else {

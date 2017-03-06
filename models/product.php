@@ -5,15 +5,17 @@ class Product extends Model {
   public $picture;
   public $price;
   public $categorie;
-  public $categorie_id;
   public $brand;
-  public $brand_id;
   public $grade;
   public $color;
   public $sale;
+  protected $brand_id;
+  protected $categorie_id;
+
 
   const TABLE_NAME = "Product";
   const TABLE_COLUMNS = ["id", "name", "brand_id", "categorie_id", "picture", "grade", "color", "price", "sale"];
+  const TABLE_JOIN = ["getBrand", "getCategorie"];
 
   static function Create($name, $picture, $grade, $color, $price, $sale, $brand = null, $categorie = null){
     $c = new Product();
@@ -72,7 +74,7 @@ class Product extends Model {
   }
 
   function getCategorie(){
-    if($this->categorie != null) {
+    if($this->categorie == null) {
       $this->categorie = Categorie::getById($this->categorie_id);
     }
     return $this->categorie;
