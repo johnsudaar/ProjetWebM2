@@ -45,6 +45,21 @@
         </div>
       </div>
     </div>
+    <footer class="container">
+      <span> © Jonathan Hurter - Master ILC - Projet WEB </span>
+      <span class="pull-right end-container">
+        <span>
+          <a class="bold"> EN </a>
+          <a> FR </a>
+          <a> ES </a>
+        </span>
+        <span>
+          <a class="bold"> $ </a>
+          <a> € </a>
+          <a> £ </a>
+        </span>
+      </span>
+    </footer>
   </body>
 
   <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.js"> </script>

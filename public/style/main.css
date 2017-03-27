@@ -129,6 +129,22 @@ footer {
   margin: 0 0px;
 }
 
+footer{
+  font-size: 10px;
+}
+
+footer a {
+  color: #333;
+}
+
+.end-container span a {
+  margin: 0 3px;
+}
+
+.end-container span {
+  margin: 0 10px;
+}
+
 /* **************** INDEX **************** */
 
 .shop-class {
