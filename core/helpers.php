@@ -19,6 +19,6 @@ function redirect($path){
 }
 
 function notFound() {
-  render("404");
+  render("404",[]);
   die();
 }

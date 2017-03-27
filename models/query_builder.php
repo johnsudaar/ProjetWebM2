@@ -80,7 +80,7 @@ class QueryBuilder {
     $query->execute();
     $data = array();
     while ($row = $query->fetch()) {
-      $data[] = new $this->class_name($row);
+      $data[] = (new $this->class_name($row))->complete();
     }
     return $data;
   }

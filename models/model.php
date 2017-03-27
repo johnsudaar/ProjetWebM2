@@ -50,7 +50,7 @@ class Model {
     return $this;
   }
 
-  protected function complete(){
+  public function complete(){
     foreach(static::TABLE_JOIN as $join) {
       $this->{$join}();
     }
