@@ -145,12 +145,63 @@ footer a {
   margin: 0 10px;
 }
 
+.align-center{
+  width: 100%;
+  text-align: center;
+}
+
+.template-hidden{
+  display: none;
+}
+
 /* **************** INDEX **************** */
+
+.sale-price  {
+  color: red;
+  margin-left: .5em;
+  font-size: 1.5em;
+}
+
+.price-crossed {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.item-image {
+  height: 206px;
+  width: 160px;
+  background-image: url("/public/images/placeholder2.png");
+}
+
+.item-actions {
+  display: flex;
+}
+
+.item-actions img {
+  cursor: pointer;
+}
+
+.item-list .item {
+  margin-top: 20px;
+}
+
+.flex-separator {
+  flex-grow: 1;
+}
+
+.grade {
+  width: 90px;
+}
+
+.full-star {
+  margin-top: -20px;
+  height: 20px;
+  overflow: hidden;
+}
 
 .shop-class {
   font-weight: normal;
 }
-
 
 .filters {
   border-radius: 0px;

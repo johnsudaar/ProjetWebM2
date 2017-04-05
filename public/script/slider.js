@@ -6,15 +6,7 @@ var supportsMultiple = self.HTMLInputElement && "valueLow" in HTMLInputElement.p
 var descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
 
 self.multirange = function(input) {
-  registerDomObserver("priceMin");
-  registerDomObserver("priceMax");
-
-  window.dom_observers["priceMin"].addListener(function(val){
-    window.filters.set(val["value"],"price_min");
-  });
-  window.dom_observers["priceMax"].addListener(function(val){
-    window.filters.set(val["value"],"price_max");
-  });
+  registerDomObserver("filters");
 
 	if (supportsMultiple || input.classList.contains("multirange")) {
 		return;
@@ -68,8 +60,8 @@ self.multirange = function(input) {
 	function update() {
 		ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) + 1 + "%");
 		ghost.style.setProperty("--high", 100 * ((input.valueHigh - min) / (max - min)) - 1 + "%");
-    window.dom_observers["priceMin"].set(input.valueLow);
-    window.dom_observers["priceMax"].set(input.valueHigh);
+    window.dom_observers["fitlers"].set(input.valueLow, "price_min");
+    window.dom_observers["filters"].set(input.valueHigh, "price_max");
 	}
 
 	input.addEventListener("input", update);

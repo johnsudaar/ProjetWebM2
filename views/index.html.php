@@ -15,8 +15,8 @@
           <input type="range" multiple value="100,10000" min="100" max="10000" step="50" />
         </div>
         <div class="row row-reset">
-          <p data-receive="priceMin" data-suffix="$"> 100 $ </p>
-          <p class="pull-right" data-receive="priceMax" data-suffix="$"> 10000 $ </p>
+          <p data-receive="filters" data-categorie="price_min" data-suffix="$"> 100 $ </p>
+          <p class="pull-right" data-receive="filters" data-categorie="price_max" data-suffix="$"> 10000 $ </p>
         </div>
 
         <p class="filter-title"> Color </p>
@@ -65,11 +65,11 @@
           <label class="btn btn-default glyphicon glyphicon-th-list">
             <input type="radio" name="options" id="list" autocomplete="off">
           </label>
-        </div>
-        <select class="form-control">
-          <option>15 per page</option>
-          <option>50 per page</option>
-          <option>100 per page</option>
+      </div>
+        <select class="form-control" data-send="filters" data-suffix="per_page">
+          <option value="15">15 per page</option>
+          <option value="50">50 per page</option>
+          <option value="100">100 per page</option>
         </select>
         <select class="form-control">
           <option>Position</option>
@@ -79,7 +79,43 @@
         <button class="btn btn-default glyphicon glyphicon-arrow-up"></button>
       </div>
     </div>
-
     <div class="margin-small separator"></div>
+    <div class="row item-list" id="items-container">
+    </div>
+    <div class="template-hidden" id="item-template">
+      <div class="col-md-4 item">
+        <div class="align-center">
+          <img src="https://unsplash.it/160/206/?image={image_id}" class="item-image" alt="{name}"/>
+        </div>
+        <a href="#"> {name} </a> <br/>
+        <p class="{price_class}"> $ {base_price}
+          <p class="sale-price">
+            {real_price}
+          </p>
+        </p>
+        <div class="grade">
+          <div class="outline-star">
+            <div class="glyphicon glyphicon-star-empty"></div>
+            <div class="glyphicon glyphicon-star-empty"></div>
+            <div class="glyphicon glyphicon-star-empty"></div>
+            <div class="glyphicon glyphicon-star-empty"></div>
+            <div class="glyphicon glyphicon-star-empty"></div>
+          </div>
+          <div class="full-star" style="width:{stars}%;">
+            <div class="glyphicon glyphicon-star"></div>
+            <div class="glyphicon glyphicon-star"></div>
+            <div class="glyphicon glyphicon-star"></div>
+            <div class="glyphicon glyphicon-star"></div>
+            <div class="glyphicon glyphicon-star"></div>
+          </div>
+        </div>
+        <div class="item-actions">
+          <img src="/public/images/add_to_cart.png" alt="Add to cart"/>
+          <div class="flex-separator"></div>
+          <img src="/public/images/swap.png"/>
+          <img src="/public/images/add.png"/>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
