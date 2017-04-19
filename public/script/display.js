@@ -1,4 +1,4 @@
-function ShowItemsList(i){
+function showItemsList(i){
   var t = Templater("#item-template","#items-container")
   t.clear();
   var items = i["results"];

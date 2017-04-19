@@ -8,7 +8,7 @@ function Observer(){
       }
       this._value[index] = val;
       for(var i = 0; i < this.listeners.length; i++) {
-        this.listeners[i](this._value);
+        this.listeners[i](this._value, index);
       }
     },
     get: function(index) {

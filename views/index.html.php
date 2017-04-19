@@ -66,7 +66,7 @@
             <input type="radio" name="options" id="list" autocomplete="off">
           </label>
       </div>
-        <select class="form-control" data-send="filters" data-suffix="per_page">
+        <select class="form-control" data-send="filters" data-categorie="per_page">
           <option value="15">15 per page</option>
           <option value="50">50 per page</option>
           <option value="100">100 per page</option>

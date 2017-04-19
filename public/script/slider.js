@@ -60,8 +60,8 @@ self.multirange = function(input) {
 	function update() {
 		ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) + 1 + "%");
 		ghost.style.setProperty("--high", 100 * ((input.valueHigh - min) / (max - min)) - 1 + "%");
-    window.dom_observers["fitlers"].set(input.valueLow, "price_min");
-    window.dom_observers["filters"].set(input.valueHigh, "price_max");
+    getDomObserver("filters").set(input.valueLow, "price_min");
+    getDomObserver("filters").set(input.valueHigh, "price_max");
 	}
 
 	input.addEventListener("input", update);
