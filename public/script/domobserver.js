@@ -25,11 +25,21 @@ $(function(){
   $("[data-send]").each(function(index){
     var observer = $(this).attr("data-send");
     registerDomObserver(observer);
-    cat = "value";
+    var cat = "value";
     if($(this).attr("data-categorie") != null) {
       cat = $(this).attr("data-categorie");
     }
-    window.dom_observers[observer].set($(this).val(), cat);
+
+    if($(this).attr("data-value") != null) {
+      $(this).click(function() {
+        window.dom_observers[observer].set($(this).attr("data-value"), cat);
+      });
+    } else {
+      $(this).change(function() {
+        window.dom_observers[observer].set($(this).val(), cat);
+      });
+      window.dom_observers[observer].set($(this).val(), cat);
+    }
   });
 })
 

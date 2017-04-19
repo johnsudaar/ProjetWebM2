@@ -21,23 +21,23 @@
 
         <p class="filter-title"> Color </p>
         <div class="line"></div>
-        <div class="colors">
-          <div class="red"></div>
-          <div class="orange"></div>
-          <div class="yellow"></div>
-          <div class="green"></div>
-          <div class="aqua"></div>
-          <div class="cyan"></div>
-          <div class="light-blue"></div>
-          <div class="blue"></div>
-          <div class="dark-purple"></div>
-          <div class="purple"></div>
-          <div class="black"></div>
-          <div class="white"></div>
-          <div class="black-white"></div>
-          <div class="pink"></div>
-          <div class="dark-pink"></div>
-        </div>
+        <ul class="colors">
+          <li data-send="filters" data-categorie="color" data-value="red" class="red"></li>
+          <li data-send="filters" data-categorie="color" data-value="orange" class="orange"></li>
+          <li data-send="filters" data-categorie="color" data-value="yellow" class="yellow"></li>
+          <li data-send="filters" data-categorie="color" data-value="green" class="green"></li>
+          <li data-send="filters" data-categorie="color" data-value="aqua" class="aqua"></li>
+          <li data-send="filters" data-categorie="color" data-value="cyan" class="cyan"></li>
+          <li data-send="filters" data-categorie="color" data-value="light-blue" class="light-blue"></li>
+          <li data-send="filters" data-categorie="color" data-value="blue" class="blue"></li>
+          <li data-send="filters" data-categorie="color" data-value="dark-purple" class="dark-purple"></li>
+          <li data-send="filters" data-categorie="color" data-value="purple" class="purple"></li>
+          <li data-send="filters" data-categorie="color" data-value="black" class="black"></li>
+          <li data-send="filters" data-categorie="color" data-value="white" class="white"></li>
+          <li data-send="filters" data-categorie="color" data-value="black-white" class="black-white"></li>
+          <li data-send="filters" data-categorie="color" data-value="pink" class="pink"></li>
+          <li data-send="filters" data-categorie="color" data-value="dark-pink" class="dark-pink"></li>
+        </ul>
 
         <p class="filter-title"> Brand </p>
         <div class="line"></div>

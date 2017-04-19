@@ -6,6 +6,11 @@ class ProductController {
     if(isset($_GET['page'])) {
       $page = $_GET['page'];
     }
+
+    if(isset($_GET['per_page'])) {
+      $page_size = $_GET['per_page'];
+    }
+
     $query = Product::QueryBuilder()->paginate($page, $page_size);
 
     $fields = ["color", "categorie_id", "brand_id"];
@@ -27,7 +32,7 @@ class ProductController {
     if(isset($_GET["price_min"])){
       $query->andGreaterOrEqual("price",$_GET['price_min']);
     }
-    
+
     $data = array();
     $data["results"] =$query->execute();
     $data["page"] = $page;

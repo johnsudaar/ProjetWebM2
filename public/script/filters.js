@@ -4,7 +4,6 @@ window._filter = Observer();
 window.filter_timeout = 0;
 
 window.getDomObserver("filters").addListener(function(value, index) {
-  console.log("set");
   window.filters.set(value[index], index);
 })
 
@@ -29,7 +28,6 @@ window.filters.addListener(function(value){
   if(value["page"] != null) {
     filter[filter.length] = "page="+value["page"];
   }
-
   if(value["per_page"] != null) {
     filter[filter.length] = "per_page="+value["per_page"];
   }

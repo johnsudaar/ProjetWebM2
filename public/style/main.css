@@ -156,6 +156,10 @@ footer a {
 
 /* **************** INDEX **************** */
 
+.pointer {
+  cursor: pointer;
+}
+
 .sale-price  {
   color: red;
   margin-left: .5em;
@@ -266,13 +270,14 @@ footer a {
   height: 50px;
 }
 
-.colors > div {
+.colors > li {
   height: 22px;
   width: 22px;
   display: inline-block;
   float:left;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 
 .items {
@@ -283,7 +288,7 @@ footer a {
   margin-top: 15px;
 }
 
-.colors > div:hover{
+.colors > li:hover{
   box-shadow: 0px 0px 4px black;
   outline-style: solid;
   outline-color: white;
@@ -291,7 +296,7 @@ footer a {
   z-index: 2;
 }
 
-.colors > div.selected {
+.colors > li.selected {
   box-shadow: 0px 0px 4px black;
   outline-style: solid;
   outline-color: white;
