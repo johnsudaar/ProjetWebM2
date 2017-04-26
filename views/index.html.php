@@ -82,40 +82,55 @@
     <div class="margin-small separator"></div>
     <div class="row item-list" id="items-container">
     </div>
-    <div class="template-hidden" id="item-template">
-      <div class="col-md-4 item">
-        <div class="align-center">
-          <img src="https://unsplash.it/160/206/?image={image_id}" class="item-image" alt="{name}"/>
-        </div>
-        <a href="#"> {name} </a> <br/>
-        <p class="{price_class}"> $ {base_price}
-          <p class="sale-price">
-            {real_price}
-          </p>
-        </p>
-        <div class="grade">
-          <div class="outline-star">
-            <div class="glyphicon glyphicon-star-empty"></div>
-            <div class="glyphicon glyphicon-star-empty"></div>
-            <div class="glyphicon glyphicon-star-empty"></div>
-            <div class="glyphicon glyphicon-star-empty"></div>
-            <div class="glyphicon glyphicon-star-empty"></div>
-          </div>
-          <div class="full-star" style="width:{stars}%;">
-            <div class="glyphicon glyphicon-star"></div>
-            <div class="glyphicon glyphicon-star"></div>
-            <div class="glyphicon glyphicon-star"></div>
-            <div class="glyphicon glyphicon-star"></div>
-            <div class="glyphicon glyphicon-star"></div>
-          </div>
-        </div>
-        <div class="item-actions">
-          <img src="/public/images/add_to_cart.png" alt="Add to cart"/>
-          <div class="flex-separator"></div>
-          <img src="/public/images/swap.png"/>
-          <img src="/public/images/add.png"/>
-        </div>
+  </div>
+</div>
+
+<!-- TEMPLATES -->
+
+<div class="template-hidden" id="item-template">
+  <div class="col-md-4 item">
+    <div class="align-center">
+      <div class="{flash_class} flash">
+        {flash_text}
       </div>
+      <img src="https://unsplash.it/160/206/?image={image_id}" class="item-image" alt="{name}"/>
+    </div>
+    <a href="#"> {name} </a> <br/>
+    <p class="{price_class}"> $ {base_price}
+      <p class="sale-price">
+        {real_price}
+      </p>
+    </p>
+    <div class="grade">
+      <div class="outline-star">
+        <div class="glyphicon glyphicon-star-empty"></div>
+        <div class="glyphicon glyphicon-star-empty"></div>
+        <div class="glyphicon glyphicon-star-empty"></div>
+        <div class="glyphicon glyphicon-star-empty"></div>
+        <div class="glyphicon glyphicon-star-empty"></div>
+      </div>
+      <div class="full-star" style="width:{stars}%;">
+        <div class="glyphicon glyphicon-star"></div>
+        <div class="glyphicon glyphicon-star"></div>
+        <div class="glyphicon glyphicon-star"></div>
+        <div class="glyphicon glyphicon-star"></div>
+        <div class="glyphicon glyphicon-star"></div>
+      </div>
+    </div>
+    <div class="item-actions">
+      <img src="/public/images/add_to_cart.png" alt="Add to cart" class="add-to-cart" data-item-id="{id}"/>
+      <div class="flex-separator"></div>
+      <img src="/public/images/swap.png"/>
+      <img src="/public/images/add.png"/>
     </div>
   </div>
 </div>
+
+
+<div class="template-hidden" id="cart-item-template">
+  <li class="cart-item">
+    <div class="cart-item-name"> {name} </div>
+    <div class="cart-price"> {price} €</div>
+  </li>
+</div>
+

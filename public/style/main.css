@@ -34,6 +34,12 @@ footer {
   margin-top: 50px;
 }
 
+.dropdown-menu.right-align {
+  right: 0;
+  min-width: 300px;
+  left: initial;
+}
+
 .separator {
   background-color: #BBB;
   position: absolute;
@@ -156,12 +162,45 @@ footer a {
 
 /* **************** INDEX **************** */
 
+.flash {
+  position: absolute;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 20px;
+  padding-top: 25px;
+  border-radius: 40px;
+}
+
+.flash.sale {
+  background-color: red;
+}
+
+.flash.new {
+  background-color: green;
+}
+
 .pointer {
   cursor: pointer;
 }
 
 .selected {
   font-weight: bold;
+}
+
+.cart-item {
+  padding: 0 10px;
+  display: flex;
+}
+
+.cart-item-name {
+  flex-grow: 1;
+}
+
+.cart-total {
+  font-weight: bold;
+  border-top: solid;
 }
 
 .sale-price  {

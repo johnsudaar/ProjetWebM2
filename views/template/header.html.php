@@ -39,12 +39,16 @@
             <span class="divider-vertical"></span>
             <span class="dropdown">
               <span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span class="blue-text"> <span class="bold">My Cart</span> (2) </span>
+                <span class="blue-text"> <span class="bold">My Cart</span> (<span data-categorie="count" data-receive="cart-meta"></span>) </span>
                 <span class="caret"></span>
               </span>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
+              <ul class="dropdown-menu right-align" aria-labelledby="dropdownMenu1">
+                <div id="cart-items-container">
+                </div>
+                <li class="cart-item cart-total">
+                  <div class="cart-item-name"> Total: </div>
+                  <div data-receive="cart-meta" data-categorie="price" data-suffix="€"> </div>
+                </li>
               </ul>
             </span>
           </div>

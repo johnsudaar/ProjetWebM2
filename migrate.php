@@ -58,7 +58,8 @@ query("CREATE TABLE ".Product::TABLE_NAME." (\n".
   "grade INT NOT NULL, \n".
   "color VARCHAR(20) NOT NULL, \n".
   "sale INT, \n".
-  "picture VARCHAR(60) NOT NULL)");
+  "picture VARCHAR(60) NOT NULL, \n".
+  "new BOOLEAN)");
 
 $categories = array();
 
@@ -100,12 +101,17 @@ foreach ($categories as $categorie) {
       for($i = 0; $i < 9 ; $i++) {
         $grade = rand(1,10);
         $price = rand(100, 10000);
+        $new = false;
         $sale  = 0;
         if($i == 0) {
           $sale = rand(1,5) * 10;
         }
+
+        if($sale == 0 && rand(1,15) == 1){
+          $new = true;
+        }
         $name = ucfirst($color." ".$generator->getName());
-        Product::create($name, "pic.png", $grade, $color, $price, $sale, $brand, $categorie)->save();
+        Product::create($name, "pic.png", $grade, $color, $price, $sale, $new, $brand, $categorie)->save();
         ce(".");
       }
     }

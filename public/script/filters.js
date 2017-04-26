@@ -45,8 +45,18 @@ window.filters.addListener(function(value){
 });
 
 window._filter.addListener(function(f){
-  Promise().then(constructFilter).then(getProducts).then(showItemsList).error(showError).call(null);
+  Promise().then(constructFilter)
+    .then(getProducts)
+    .then(showItemListWraper)
+    .then(refreshCartItemListeners)
+    .error(showError)
+    .call(null);
 });
+
+function showItemListWraper(d, resolve, reject) {
+  showItemsList(d);
+  resolve(d);
+}
 
 function constructFilter(d, resolve, reject) {
   filter = window._filter.get();
@@ -55,6 +65,7 @@ function constructFilter(d, resolve, reject) {
 
 function getProducts(data, resolve, reject) {
   $.getJSON("/index.php/product/search?"+data, function(data){
+    window.items = data["results"];
     resolve(data);
   }).fail(function(jqxhr, textStatus, error){
     var err = textStatus + ", " + error;

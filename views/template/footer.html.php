@@ -71,5 +71,5 @@
   <script src="/public/script/domobserver.js"> </script>
   <script src="/public/script/filters.js"> </script>
   <script src="/public/script/index_display.js"> </script>
-
+  <script src="/public/script/cart.js"> </script>
 </html>

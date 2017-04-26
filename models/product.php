@@ -10,15 +10,16 @@ class Product extends Model {
   public $color;
   public $sale;
   public $real_price;
+  public $new;
   protected $brand_id;
   protected $categorie_id;
 
 
   const TABLE_NAME = "Product";
-  const TABLE_COLUMNS = ["id", "name", "brand_id", "categorie_id", "picture", "grade", "color", "price", "sale"];
+  const TABLE_COLUMNS = ["id", "name", "brand_id", "categorie_id", "picture", "grade", "color", "price", "sale", "new"];
   const TABLE_JOIN = ["getBrand", "getCategorie"];
 
-  static function Create($name, $picture, $grade, $color, $price, $sale, $brand = null, $categorie = null){
+  static function Create($name, $picture, $grade, $color, $price, $sale, $new, $brand = null, $categorie = null){
     $c = new Product();
     $c->name      = $name;
     $c->id        = -1;
@@ -29,6 +30,7 @@ class Product extends Model {
     $c->sale      = $sale;
     $c->brand     = $brand;
     $c->categorie = $categorie;
+    $c->new       = $new;
 
     if($c->brand != null) {
       $c->brand_id = $c->brand->getId();
@@ -97,5 +99,9 @@ class Product extends Model {
     }
 
     return $this->brand;
+  }
+
+  function isNew(){
+    return $this->new;
   }
 }
