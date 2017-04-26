@@ -22,6 +22,10 @@ function registerDomObserver(observer){
 }
 
 $(function(){
+  refreshDomObservers();
+})
+
+function refreshDomObservers(){
   $("[data-send]").each(function(index){
     var observer = $(this).attr("data-send");
     registerDomObserver(observer);
@@ -38,11 +42,12 @@ $(function(){
       $(this).change(function() {
         window.dom_observers[observer].set($(this).val(), cat);
       });
-      window.dom_observers[observer].set($(this).val(), cat);
+      if(window.dom_observers[observer].get(cat) != $(this).val()) {
+        window.dom_observers[observer].set($(this).val(), cat);
+      }
     }
   });
-})
-
+}
 function getDomObserver(observer) {
   if(window.dom_observers == null) {
     window.dom_observers = {};

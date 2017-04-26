@@ -37,6 +37,47 @@ function showItemsList(i){
       flash_class: flash_class,
       flash_text: flash_text,
     });
+
+    showPagination(i["page"], i["total_page"]);
+    refreshDomObservers();
+  }
+}
+
+function generatePaginationData(page, cur_page){
+  if(page == cur_page){
+    return {
+      page: page,
+      state: "enabled"
+    }
+  } else {
+    return {
+      page: page,
+      state: "",
+    }
+  }
+}
+
+function showPagination(cur_page, total_page) {
+  var max_page = 5;
+  var t = Templater("#page-template", "#paginator-container");
+  t.clear();
+  if(cur_page > max_page) {
+    t.add(generatePaginationData(1, cur_page));
+  }
+
+  var start_page = cur_page - Math.floor(max_page/2);
+  if(start_page < 1) {
+    start_page  = 1;
+  }
+
+  for(var i = start_page; i < start_page + max_page; i++) {
+    if(i <= total_page) {
+      t.add(generatePaginationData(i, cur_page));
+    }
+  }
+
+  if(cur_page < total_page - max_page) {
+    t.add(generatePaginationData(total_page, cur_page));
   }
 }
 

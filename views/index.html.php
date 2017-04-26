@@ -68,8 +68,8 @@
       </div>
         <select class="form-control" data-send="filters" data-categorie="per_page">
           <option value="15">15 per page</option>
+          <option value="25">25 per page</option>
           <option value="50">50 per page</option>
-          <option value="100">100 per page</option>
         </select>
         <select class="form-control">
           <option>Position</option>
@@ -81,6 +81,10 @@
     </div>
     <div class="margin-small separator"></div>
     <div class="row item-list" id="items-container">
+    </div>
+    <div class="paginate-container">
+      <div class="paginate" id="paginator-container">
+      </div>
     </div>
   </div>
 </div>
@@ -134,3 +138,8 @@
   </li>
 </div>
 
+<div class="template-hidden" id="page-template">
+  <a class="page {state}" data-send="filters" data-categorie="page" data-value="{page}">
+    {page}
+  </a>
+</div>

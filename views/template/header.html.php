@@ -49,6 +49,9 @@
                   <div class="cart-item-name"> Total: </div>
                   <div data-receive="cart-meta" data-categorie="price" data-suffix="€"> </div>
                 </li>
+                <li>
+                  <a class="btn btn-primary"> Checkout </a>
+                </li>
               </ul>
             </span>
           </div>

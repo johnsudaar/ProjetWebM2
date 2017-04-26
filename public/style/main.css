@@ -160,6 +160,28 @@ footer a {
   display: none;
 }
 
+.page {
+  border: solid;
+  border-radius: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+
+}
+
+.page.enabled{
+  background-color: #337ab7;
+  color: white;
+}
+
+.paginate-container {
+  margin: 20px;
+  text-align: center;
+}
+
 /* **************** INDEX **************** */
 
 .flash {

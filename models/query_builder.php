@@ -13,7 +13,7 @@ class QueryBuilder {
     $this->table_name = $table_name;
     $this->class_name = $class_name;
     $this->query      = "";
-    $this->first      =  true;
+    $this->first      = true;
     $this->paginate   = false;
   }
 
@@ -62,6 +62,19 @@ class QueryBuilder {
     $this->page      = $page;
     $this->paginate  = true;
     return $this;
+  }
+
+  public function count() {
+    $query = "SELECT COUNT(*) FROM ".$this->table_name." WHERE ".$this->query;
+    if($this->first) {
+      $query = "SELECT COUNT(*) FROM ".$this->table_name;
+    }
+    $driver = DBDriver::get()->getDriver();
+    $query  = $driver->prepare($query);
+    $query->execute();
+
+
+    return $query->fetch()[0];
   }
 
   public function execute(){

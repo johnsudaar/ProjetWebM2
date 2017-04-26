@@ -33,11 +33,14 @@ class ProductController {
       $query->andGreaterOrEqual("price",$_GET['price_min']);
     }
 
+    $total_page = ceil($query->count() / $page_size);
+
     $data = array();
     $data["results"] =$query->execute();
     $data["page"] = $page;
     $data["page_size"] = $page_size;
     $data["count"] = count($data["results"]);
+    $data["total_page"] = $total_page;
     render_json($data);
   }
 }
