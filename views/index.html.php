@@ -42,9 +42,9 @@
         <p class="filter-title"> Brand </p>
         <div class="line"></div>
 
-        <ul>
+        <ul class="brands">
           <?php foreach ($brands as $brand): ?>
-            <li> <?= $brand->getName() ?>
+            <li class="pointer" data-value="<?= $brand->getId()?>" data-categorie="brand" data-send="filters"> <?= $brand->getName() ?>
           <?php endforeach; ?>
         </ui>
       </div>

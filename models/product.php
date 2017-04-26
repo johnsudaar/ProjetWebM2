@@ -9,6 +9,7 @@ class Product extends Model {
   public $grade;
   public $color;
   public $sale;
+  public $real_price;
   protected $brand_id;
   protected $categorie_id;
 
@@ -59,6 +60,16 @@ class Product extends Model {
 
   function getPrice(){
     return $this->price;
+  }
+
+  function getRealPrice() {
+    $sale = $this->getSale();
+    $base_price = $this->getPrice();
+    if($sale == null) {
+      return $base_price;
+    }
+
+    return $base_price * (100 - $sale) / 100;
   }
 
   function getGrade(){

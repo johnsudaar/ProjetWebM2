@@ -31,6 +31,9 @@ window.filters.addListener(function(value){
   if(value["per_page"] != null) {
     filter[filter.length] = "per_page="+value["per_page"];
   }
+  if(value["name"] != null){
+    filter[filter.length] = "name="+value["name"];
+  }
 
   // Prevent useless refresh
   clearTimeout(window.filter_timeout);

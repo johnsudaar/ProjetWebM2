@@ -70,5 +70,6 @@
   <script src="/public/script/observer.js"> </script>
   <script src="/public/script/domobserver.js"> </script>
   <script src="/public/script/filters.js"> </script>
+  <script src="/public/script/index_display.js"> </script>
 
 </html>

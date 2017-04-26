@@ -65,7 +65,7 @@
               </ul>
             </div>
             <div class="col-xs-3">
-              <input class="form-control square-border" type="test"/>
+              <input class="form-control square-border" type="text" data-send="filters" data-categorie="name"/>
               <span class="glyphicon-form glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
             </div>
           </div>

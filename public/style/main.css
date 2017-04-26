@@ -160,6 +160,10 @@ footer a {
   cursor: pointer;
 }
 
+.selected {
+  font-weight: bold;
+}
+
 .sale-price  {
   color: red;
   margin-left: .5em;
