@@ -6,9 +6,11 @@ function Observer(){
       if(index == null) {
         index = "value";
       }
-      this._value[index] = val;
-      for(var i = 0; i < this.listeners.length; i++) {
-        this.listeners[i](this._value, index);
+      if(this._value[index] != val) {
+        this._value[index] = val;
+        for(var i = 0; i < this.listeners.length; i++) {
+          this.listeners[i](this._value, index);
+        }
       }
     },
     get: function(index) {

@@ -4,7 +4,10 @@ window._filter = Observer();
 window.filter_timeout = 0;
 
 window.getDomObserver("filters").addListener(function(value, index) {
-  window.filters.set(value[index], index);
+  clearTimeout(window.filter_timeout);
+  window.filter_timeout = setTimeout(function(){
+    window.filters.set(value[index], index);
+  }, 500);
 })
 
 window.filters.addListener(function(value){
@@ -36,11 +39,7 @@ window.filters.addListener(function(value){
   }
 
   // Prevent useless refresh
-  clearTimeout(window.filter_timeout);
-  window.filter_timeout = setTimeout(function(){
-    console.log(filter)
-    window._filter.set(filter);
-  }, 500);
+  window._filter.set(filter);
 
 });
 

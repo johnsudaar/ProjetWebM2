@@ -8,16 +8,17 @@ $(function() {
   registerDomObserver("cart-meta");
   window.dom_observers["cart-meta"].set(0, "price");
   window.dom_observers["cart-meta"].set(0, "count");
+  window.dom_observers["cart-meta"].set("", "items");
 
 })
 
 function refreshCartItemListeners() {
   $(".add-to-cart").click(function() {
-    console.log("Salut");
     var item = findById($(this).attr("data-item-id"), window.items);
     var cart = window.cart.get();
     cart[cart.length] = item;
     var total_price = 0;
+    var items = "";
     for(var i = 0; i < cart.length; i++) {
       var price = cart[i]["price"] * 1;
       if(cart[i]["sale"]) {
