@@ -47,10 +47,13 @@
                 </div>
                 <li class="cart-item cart-total">
                   <div class="cart-item-name"> Total: </div>
-                  <div data-receive="cart-meta" data-categorie="price" data-suffix="€"> </div>
+                  <div data-receive="cart-meta" data-categorie="price" data-prefix="$"> </div>
                 </li>
                 <li>
-                  <a class="btn btn-primary"> Checkout </a>
+                  <form method="GET" action="/index.php/main/checkout">
+                    <input type="hidden" name="items" value="" id="cart-global-input"/>
+                    <input type="submit" class="btn btn-primary full-width" value="Checkout"/>
+                  </form>
                 </li>
               </ul>
             </span>
@@ -60,7 +63,9 @@
         <nav class="margin-small">
           <div class="row vertical-align">
             <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-md-2 col-sm-offset-0">
-              <img class="full-width" src="/public/images/logo.png"/>
+              <a class="full-width" href="/">
+                <img class="full-width" src="/public/images/logo.png"/>
+              </a>
             </div>
             <div class="col-xs-9 col-sm-6 col-md-7">
               <ul class="menu pull-right">

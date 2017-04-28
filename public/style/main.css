@@ -34,6 +34,14 @@ footer {
   margin-top: 50px;
 }
 
+.align-right{
+  text-align: right;
+}
+
+.hide-text {
+  color: #fff;
+}
+
 .dropdown-menu.right-align {
   right: 0;
   min-width: 300px;
@@ -180,6 +188,21 @@ footer a {
 .paginate-container {
   margin: 20px;
   text-align: center;
+}
+
+.btn-bordered{
+  background-color: #fff;
+  color: grey;
+  border-color: #ccc;
+  font-weight: bold;
+}
+
+.btn-bordered:hover{
+  background-color: #aaa;
+}
+
+.btn-primary {
+  background-color: #57A0E0;
 }
 
 /* **************** INDEX **************** */
@@ -416,4 +439,57 @@ footer a {
 }
 .dark-pink {
   background-color: #CB0080;
+}
+
+/* **************** CHECKOUT **************** */
+
+.cart-form h4 {
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.cart-form .form-group label {
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+
+.btn-checkout {
+  width: 80%;
+}
+
+.btn-checkout-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.grand-total {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.item-image-checkout {
+  height: 90px;
+  width: 70px;
+  background-image: url("/public/images/placeholder3.png");
+}
+
+.checkout-line td:first-child {
+  text-align: left;
+}
+
+.checkout-line td {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.checkout-count {
+  border: 1px solid #ccc;
+  width: inherit;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
 }

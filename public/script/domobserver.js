@@ -16,6 +16,10 @@ function registerDomObserver(observer){
       if($(this).attr("data-suffix") != null) {
         str += " "+$(this).attr("data-suffix");
       }
+
+      if($(this).attr("data-prefix") != null) {
+        str = $(this).attr("data-prefix") + " " + str;
+      }
       $(this).text(str);
     })
   });

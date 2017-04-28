@@ -134,7 +134,7 @@
 <div class="template-hidden" id="cart-item-template">
   <li class="cart-item">
     <div class="cart-item-name"> {name} </div>
-    <div class="cart-price"> {price} €</div>
+    <div class="cart-price"> $ {price}</div>
   </li>
 </div>
 
