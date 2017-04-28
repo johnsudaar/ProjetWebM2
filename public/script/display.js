@@ -82,7 +82,6 @@ function showPagination(cur_page, total_page) {
 }
 
 function showCartList(items) {
-  console.log(items);
   var t = Templater("#cart-item-template", "#cart-items-container");
   t.clear();
 

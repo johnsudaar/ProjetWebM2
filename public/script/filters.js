@@ -11,7 +11,6 @@ window.getDomObserver("filters").addListener(function(value, index) {
 })
 
 window.filters.addListener(function(value){
-  console.log("receive")
   filter = [];
   if(value["categorie"] != null) {
     filter[filter.length] = "categorie_id="+value["categorie"];
