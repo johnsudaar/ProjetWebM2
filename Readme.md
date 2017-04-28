@@ -4,6 +4,8 @@ Ce projet à été réalisé par Hurter Jonathan. Dans le cadre du projet Web du
 
 ## Instalation
 
+Le code source de ce projet est disponible à l'adresse suivante: [https://github.com/johnsudaar/ProjetWebM2/archive/master.zip](https://github.com/johnsudaar/ProjetWebM2/archive/master.zip).
+
 Le projet est disponible à l'url [https://john-web-m2.ares-ensiie.eu/]("https://john-web-m2.ares-ensiie.eu/).
 
 Afin de le lancer plus simplement, une stack docker est disponible. Pour la lancer, la procédure est la suivante:
